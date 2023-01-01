@@ -1,11 +1,13 @@
-# Getting Started with Create React App
+# Collection of React reusable components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## styled with Tailwind css framework  
 
-## Available Scripts
 
-In the project directory, you will find list of components ready to use
-cd to /src/components/
+
+
+### In the project directory, you will find list of components ready to use
+
+### cd to /src/components/
 
 ### to test every component before use uncomment it in app.js 
 
@@ -13,3 +15,4 @@ cd to /src/components/
 feel free to give feedback and/or recommendations
 
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
