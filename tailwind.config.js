@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         cTextDark: "#301934",
-        cMain: "#fe6601",
+        cMain: "#0d1117",
       },
     },
   },

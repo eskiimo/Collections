@@ -12,7 +12,7 @@ const ReusableNav = (props) => {
       <div className="flex items-center justify-between">
         {/* Logo */}
 
-        <div className="pt-2 w-10 flex flex-row">
+        <div className="pt-2  flex flex-row">
           {props.logo ? <img src={props.logo} alt={props.title} /> : <></>}
           <Link
             to="/"
