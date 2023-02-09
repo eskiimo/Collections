@@ -19,7 +19,7 @@ const Calender = () => {
     { ndays: 30, month: "November" },
     { ndays: 31, month: "December" },
   ];
-  const days = [
+  var days = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
   ];
@@ -33,23 +33,36 @@ const Calender = () => {
   setOffsetdays();
   const handleNextmonth = () => {
     setMonth(month + 1);
-    console.log("next");
+    console.log(days);
   };
   const handleLastmonth = () => {
     setMonth(month - 1);
-    console.log("last");
   };
   return (
     <>
-      <h1 className="flex justify-center text-center my-5 mx-auto text-black">
-        {MONTHS[month].month} {year}
-      </h1>
-      <div className="flex flex-wrap w-5/6 min-h-[60vh]   mx-auto">
+      <div className="flex flex-row justify-center">
+        <button
+          onClick={handleLastmonth}
+          className="rounded-full px-3 m-5 bg-darkPurple text-white"
+        >
+          <i className="text-lg fa-solid fa-caret-left"></i>
+        </button>
+        <h1 className="flex justify-center text-center my-5  text-black">
+          {MONTHS[month].month} {year}
+        </h1>
+        <button
+          onClick={handleNextmonth}
+          className="rounded-full px-3 m-5 bg-darkPurple text-white"
+        >
+          <i className="text-lg fa-solid fa-caret-right"></i>
+        </button>
+      </div>
+      <div className="flex flex-wrap w-[5/6] max-w-[1000px] justify-center   mx-auto">
         {days.map((day, index) => {
           return (
             <div
               key={index}
-              className={`flex w-[14%]   text-black border ${
+              className={`flex w-[140px] h-[140px]   text-black border ${
                 day === today &&
                 month === date.getMonth() &&
                 "bg-darkPurple text-white"
@@ -59,20 +72,6 @@ const Calender = () => {
             </div>
           );
         })}
-      </div>
-      <div className="flex flex-row justify-center">
-        <button
-          onClick={handleLastmonth}
-          className="rounded-full px-3 m-5 bg-darkPurple text-white"
-        >
-          last
-        </button>
-        <button
-          onClick={handleNextmonth}
-          className="rounded-full px-3 m-5 bg-darkPurple text-white"
-        >
-          next
-        </button>
       </div>
     </>
   );
